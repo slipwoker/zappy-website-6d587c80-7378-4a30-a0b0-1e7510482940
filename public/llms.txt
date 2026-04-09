@@ -1,0 +1,59 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+T.D GLOBAL מספקת כבלי חשמל למתח נמוך וגופי תאורה לתשתיות בקנה מידה עולמי. פתרונות מקצועיים לחברות, ממשלות ועיריות — גלו את הפתרון המושלם לפרויקט הבא שלכם.
+
+### סקטורים
+https://example.com/sectors
+מכבישים ומנהרות ועד פארקים ומלונות — T.D GLOBAL מציעה גופי תאורה לכבישים וייצוא בינלאומי לכל סקטור תשתיתי. גלו את הפתרון המדויק לענף שלכם ופנו אלינו היום.
+
+### אודות
+https://example.com/about
+T.D GLOBAL היא חברת ייבוא וייצוא בינלאומית המתמחה בכבלי חשמל וגופי תאורה לתשתיות. למדו על החזון, הערכים והמומחיות שהופכים אותנו לשותף האמין של ממשלות וחברות ברחבי העולם.
+
+### צור קשר
+https://example.com/contact
+מוכנים להתחיל פרויקט תשתית בקנה מידה גדול? צרו קשר עם T.D GLOBAL לקבלת הצעת מחיר על כבלי חשמל וגופי תאורה לכבישים — אנו עובדים עם עיריות, ממשלות וחברות בכל העולם.
+
+### Products
+https://example.com/products
+המוצרים שלנו - T.D GLOBAL
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - T.D GLOBAL
+
+### Category
+https://example.com/category/:slug
+מוצרים - T.D GLOBAL
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
