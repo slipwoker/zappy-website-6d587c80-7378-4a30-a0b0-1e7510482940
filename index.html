@@ -245,1022 +245,57 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-
-
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.index-sectors-section {
-  position: relative;
-  overflow: visible;
-  background-color: #0A192F;
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(212,175,55,0.08) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(112,128,144,0.10) 0%, transparent 40%),
-    linear-gradient(180deg, #0A192F 0%, #0D2240 100%);
-  color: var(--text-light);
-  padding: 100px 24px 80px;
-  direction: rtl;
-}
-
-.index-sectors-section .sectors-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* ── Section Header ── */
-.index-sectors-section .sectors-header {
-  text-align: center;
-  margin-bottom: 60px;
-  max-width: 720px;
-  margin-inline: auto;
-  margin-bottom: 60px;
-}
-
-.index-sectors-section .sectors-eyebrow {
-  display: inline-block;
-  font-family: 'Manrope', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--primary);
-  border: 1px solid rgba(212,175,55,0.35);
-  border-radius: 999px;
-  padding: 5px 18px;
-  margin-bottom: 20px;
-}
-
-.index-sectors-section .sectors-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--text-light);
-  margin: 0 0 20px;
-  letter-spacing: -0.01em;
-}
-
-.index-sectors-section .sectors-intro {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.7);
-  margin: 0;
-  text-align: center;
-}
-
-/* ── Sectors Grid ── */
-.index-sectors-section .sectors-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 24px;
-  direction: rtl;
-}
-
-@media (min-width: 768px) {
-  .index-sectors-section .sectors-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .index-sectors-section .sector-card--wide {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .index-sectors-section .sectors-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  .index-sectors-section .sector-card--wide {
-    grid-column: auto;
-  }
-}
-
-/* ── Sector Card ── */
-.index-sectors-section .sector-card {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(81,109,146,0.35);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
-}
-
-.index-sectors-section .sector-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 42px rgba(0,0,0,0.38), 0 0 0 1px rgba(212,175,55,0.2);
-}
-
-/* ── Card Image Wrap ── */
-.index-sectors-section .sector-card__image-wrap {
-  position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-@media (min-width: 768px) {
-  .index-sectors-section .sector-card--wide .sector-card__image-wrap {
-    height: 280px;
-  }
-}
-
-.index-sectors-section .sector-card__bg {
-  position: absolute;
-  inset: 0;
-  background-color: #1a2e45;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-}
-
-.index-sectors-section .sector-card:hover .sector-card__bg {
-  transform: scale(1.05);
-}
-
-.index-sectors-section .sector-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(10,25,47,0.15) 0%,
-    rgba(10,25,47,0.65) 100%
-  );
-  z-index: 1;
-}
-
-/* ── Badge ── */
-.index-sectors-section .sector-card__badge {
-  position: absolute;
-  bottom: 14px;
-  right: 16px;
-  z-index: 2;
-  font-family: 'Manrope', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--bg-dark);
-  background: var(--primary);
-  border-radius: 999px;
-  padding: 4px 14px;
-}
-
-/* ── Card Body ── */
-.index-sectors-section .sector-card__body {
-  padding: 24px 24px 28px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: right;
-}
-
-.index-sectors-section .sector-card__title {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--text-light);
-  margin: 0 0 14px;
-}
-
-.index-sectors-section .sector-card__desc {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.65);
-  margin: 0 0 20px;
-  flex: 1;
-}
-
-.index-sectors-section .sector-card__line {
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
-  margin-inline-start: auto;
-  border-radius: 2px;
-  margin-top: auto;
-}
-
-/* ── Bottom Divider ── */
-.index-sectors-section .sectors-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.index-sectors-section .sectors-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* ── Mobile Overrides ── */
-@media (max-width: 767px) {
-  .index-sectors-section {
-    padding: 80px 16px 70px;
-  }
-
-  .index-sectors-section .sectors-header {
-    margin-bottom: 36px;
-  }
-
-  .index-sectors-section .sectors-title {
-    font-size: 1.6rem;
-  }
-
-  .index-sectors-section .sectors-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .index-sectors-section .sector-card--wide {
-    grid-column: auto !important;
-  }
-
-  .index-sectors-section .sector-card__image-wrap {
-    height: 190px;
-  }
-
-  .index-sectors-section .sector-card__body {
-    padding: 18px 18px 22px;
-  }
-
-  .index-sectors-section .sector-card__badge {
-    font-size: 10px;
-    padding: 3px 12px;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.index-showcase-section {
-  position: relative;
-  overflow: visible;
-  background-color: #0A192F;
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(212,175,55,0.08) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(112,128,144,0.12) 0%, transparent 50%),
-    linear-gradient(180deg, #0A192F 0%, #0d2240 100%);
-  color: var(--text-light);
-  padding: 90px 0 100px;
-  direction: rtl;
-}
-
-.index-showcase-section .showcase-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* ── Header ── */
-.index-showcase-section .showcase-header {
-  text-align: center;
-  margin-bottom: 56px;
-  max-width: 760px;
-  margin-inline: auto;
-  margin-bottom: 56px;
-}
-
-.index-showcase-section .showcase-label {
-  display: inline-block;
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--primary);
-  background: rgba(212,175,55,0.1);
-  border: 1px solid rgba(212,175,55,0.3);
-  border-radius: 999px;
-  padding: 6px 18px;
-  margin-bottom: 20px;
-}
-
-.index-showcase-section .showcase-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--text-light);
-  letter-spacing: -0.01em;
-  margin: 0 0 20px;
-}
-
-.index-showcase-section .showcase-intro {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.7);
-  margin: 0;
-  text-align: center;
-}
-
-/* ── Grid Layout ── */
-.index-showcase-section .showcase-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  direction: rtl;
-}
-
-/* Large card spans 2 rows on the right column */
-.index-showcase-section .showcase-card--large {
-  grid-column: 1;
-  grid-row: 1 / 3;
-}
-
-/* Tall card in left column top */
-.index-showcase-section .showcase-card--tall {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-/* Regular cards */
-.index-showcase-section .showcase-grid .showcase-card:nth-child(3) {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-.index-showcase-section .showcase-grid .showcase-card:nth-child(4) {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-/* ── Cards ── */
-.index-showcase-section .showcase-card {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  min-height: 280px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.index-showcase-section .showcase-card--large {
-  min-height: 580px;
-}
-
-.index-showcase-section .showcase-card--tall {
-  min-height: 280px;
-}
-
-.index-showcase-section .showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 48px rgba(0,0,0,0.45);
-}
-
-/* ── Card Image ── */
-.index-showcase-section .showcase-card__image-wrap {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.index-showcase-section .showcase-card__bg {
-  width: 100%;
-  height: 100%;
-  background-size: cover !important;
-  background-position: center !important;
-  min-height: unset !important;
-  transition: transform 0.5s ease;
-}
-
-.index-showcase-section .showcase-card:hover .showcase-card__bg {
-  transform: scale(1.04);
-}
-
-.index-showcase-section .showcase-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(8, 20, 40, 0.88) 0%,
-    rgba(8, 20, 40, 0.45) 45%,
-    rgba(8, 20, 40, 0.12) 100%
-  );
-}
-
-/* ── Card Content ── */
-.index-showcase-section .showcase-card__content {
-  position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  padding: 28px 28px 28px;
-  z-index: 10;
-  text-align: right;
-}
-
-.index-showcase-section .showcase-card__tag {
-  display: inline-block;
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--primary);
-  background: rgba(212,175,55,0.15);
-  border: 1px solid rgba(212,175,55,0.4);
-  border-radius: 4px;
-  padding: 4px 12px;
-  margin-bottom: 12px;
-}
-
-.index-showcase-section .showcase-card__title {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.45;
-  color: var(--text-light);
-  margin: 0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-.index-showcase-section .showcase-card--large .showcase-card__title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.375rem;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-.index-showcase-section .showcase-card--large .showcase-card__content {
-  padding: 36px 32px;
-}
-
-/* ── Accent line on hover ── */
-.index-showcase-section .showcase-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  z-index: 20;
-  transition: width 0.4s ease;
-  border-radius: 0 0 0 16px;
-}
-
-.index-showcase-section .showcase-card:hover::after {
-  width: 100%;
-}
-
-/* ── Bottom Divider ── */
-.index-showcase-section .showcase-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.index-showcase-section .showcase-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* ── Responsive: Tablet ── */
-@media (max-width: 900px) {
-  .index-showcase-section .showcase-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  .index-showcase-section .showcase-card--large {
-    grid-column: 1 / 3;
-    grid-row: auto;
-    min-height: 340px;
-  }
-
-  .index-showcase-section .showcase-card--tall {
-    grid-column: auto;
-    grid-row: auto;
-    min-height: 240px;
-  }
-
-  .index-showcase-section .showcase-grid .showcase-card:nth-child(3),
-  .index-showcase-section .showcase-grid .showcase-card:nth-child(4) {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .index-showcase-section .showcase-card {
-    min-height: 240px;
-  }
-}
-
-/* ── Responsive: Mobile ── */
-@media (max-width: 768px) {
-  .index-showcase-section {
-    padding: 60px 0 80px;
-  }
-
-  .index-showcase-section .showcase-container {
-    padding: 0 16px;
-  }
-
-  .index-showcase-section .showcase-header {
-    margin-bottom: 36px;
-  }
-
-  .index-showcase-section .showcase-title {
-    font-size: 1.6rem;
-  }
-
-  .index-showcase-section .showcase-grid {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto !important;
-    gap: 16px;
-  }
-
-  .index-showcase-section .showcase-card--large,
-  .index-showcase-section .showcase-card--tall,
-  .index-showcase-section .showcase-grid .showcase-card:nth-child(3),
-  .index-showcase-section .showcase-grid .showcase-card:nth-child(4) {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    min-height: 260px;
-  }
-
-  .index-showcase-section .showcase-card--large {
-    min-height: 300px;
-  }
-
-  .index-showcase-section .showcase-card__content {
-    padding: 20px;
-  }
-
-  .index-showcase-section .showcase-card--large .showcase-card__content {
-    padding: 24px 20px;
-  }
-
-  .index-showcase-section .showcase-card--large .showcase-card__title {
-    font-size: 1.2rem;
-  }
-
-  .index-showcase-section .showcase-card__title {
-    font-size: 0.95rem;
-  }
-}
-</style>
-
-          <style id="zappy-cta-mobile-style">
-            /* Hide CTA list item on desktop (tablets and up) */
-            @media (min-width: 769px) {
-              .nav-cta-item-mobile {
-                display: none !important;
-              }
-            }
-            /* Show CTA list item on mobile */
-            @media (max-width: 768px) {
-              .nav-cta-item-mobile {
-                display: list-item !important;
-              }
-            }
-          </style>
-        
-          <style id="zappy-nested-menu-style">
-            /* Desktop only: vertically center nav items */
-            @media (min-width: 769px) {
-              .nav-menu,
-              #navMenu {
-                align-items: center !important;
-              }
-            }
-            
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-            }
-            
-            /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when hovering */
-            }
-            
-            /* Hide menu items marked as hidden (overrides hover states) */
-            .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
-              display: none !important;
-              opacity: 0 !important;
-              visibility: hidden !important;
-              pointer-events: none !important;
-            }
-            
-            /* Keep submenu visible when hovering over the submenu itself */
-            .sub-menu:hover {
-              opacity: 1 !important;
-              visibility: visible !important;
-              pointer-events: auto !important;
-            }
-            
-            /* Nested dropdown menu styles - using more specific selectors */
-            .nav-menu .sub-menu,
-            nav .sub-menu,
-            .navbar .sub-menu {
-              display: block !important; /* Ensure submenu is in the DOM */
-              position: absolute !important;
-              top: 100%;
-              left: 0;
-              right: auto;
-              min-width: 200px;
-              background: white;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-              border-radius: 8px;
-              padding: 8px 0;
-              margin-top: 0px; /* Remove gap to prevent hover loss */
-              opacity: 0 !important;
-              visibility: hidden !important;
-              transform: translateY(-10px);
-              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-              z-index: 1000;
-              list-style: none;
-              pointer-events: none; /* Prevent interaction when hidden */
-            }
-            
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
-            [dir="rtl"] .nav-menu .sub-menu,
-            [dir="rtl"] nav .sub-menu,
-            [dir="rtl"] .navbar .sub-menu,
-            html[lang="he"] .nav-menu .sub-menu,
-            html[lang="he"] nav .sub-menu,
-            html[lang="he"] .navbar .sub-menu,
-            html[lang="ar"] .nav-menu .sub-menu,
-            html[lang="ar"] nav .sub-menu,
-            html[lang="ar"] .navbar .sub-menu {
-              left: auto;
-              right: 0;
-            }
-            
-            /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover > .sub-menu,
-            nav li:hover > .sub-menu,
-            .navbar li:hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when visible */
-            }
-            
-            /* Parent item must be relatively positioned */
-            .nav-menu li:has(.sub-menu),
-            nav li:has(.sub-menu),
-            .navbar li:has(.sub-menu) {
-              position: relative;
-            }
-            
-            /* Style for submenu items */
-            .sub-menu li {
-              list-style: none;
-              margin: 0;
-              padding: 0;
-            }
-            
-            .sub-menu a,
-            .sub-menu .menu-group-title {
-              display: block !important;
-              padding: 10px 12px !important;
-              color: #333 !important;
-              font-weight: 600 !important;
-              text-decoration: none;
-              transition: background-color 0.2s;
-              white-space: nowrap;
-              cursor: default;
-            }
-            
-            .sub-menu a:hover {
-              background-color: #f5f5f5;
-            }
-            
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-              background-color: transparent !important;
-            }
-            
-            /* On mobile, show nested menus as expandable accordion */
-            @media (max-width: 768px) {
-              /* Mobile submenu styling */
-              .nav-menu .sub-menu,
-              nav .sub-menu,
-              .navbar .sub-menu {
-                position: static !important;
-                transform: none !important;
-                box-shadow: none !important;
-                background: transparent !important;
-                margin-top: 0 !important;
-                max-height: 0;
-                overflow: hidden;
-                opacity: 0;
-                visibility: hidden;
-                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-                padding: 0 !important;
-                border-radius: 0 !important;
-              }
-              
-              /* Expanded state */
-              .sub-menu.mobile-expanded {
-                max-height: 60vh !important;
-                overflow-y: auto !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                padding: 8px 0 8px 16px !important;
-              }
-              
-              /* RTL padding adjustment */
-              [dir="rtl"] .sub-menu.mobile-expanded,
-              html[lang="he"] .sub-menu.mobile-expanded,
-              html[lang="ar"] .sub-menu.mobile-expanded {
-                padding: 8px 16px 8px 0 !important;
-              }
-              
-              /* Disable hover behavior on mobile */
-              .nav-menu li:hover > .sub-menu,
-              nav li:hover > .sub-menu,
-              .navbar li:hover > .sub-menu {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-              }
-              
-              /* Enable visibility for expanded submenus */
-              .nav-menu li > .sub-menu.mobile-expanded,
-              nav li > .sub-menu.mobile-expanded,
-              .navbar li > .sub-menu.mobile-expanded {
-                opacity: 1 !important;
-                visibility: visible !important;
-                pointer-events: auto !important;
-              }
-              
-              .sub-menu a {
-                padding: 10px 0 !important;
-                display: block !important;
-                font-size: 14px !important;
-              }
-              
-              .sub-menu a:hover {
-                background-color: transparent !important;
-              }
-              
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
-              .nav-menu li:has(.sub-menu),
-              nav li:has(.sub-menu),
-              .navbar li:has(.sub-menu) {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                align-items: center !important;
-                position: relative !important;
-                min-height: 44px !important;
-              }
-              
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) > a,
-              nav li:has(.sub-menu) > a,
-              .navbar li:has(.sub-menu) > a,
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                flex: 1 !important;
-                min-width: 0 !important;
-              }
-              
-              /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                padding: 0 !important;
-                line-height: inherit !important;
-              }
-              
-              /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) > .sub-menu,
-              nav li:has(.sub-menu) > .sub-menu,
-              .navbar li:has(.sub-menu) > .sub-menu {
-                flex-basis: 100% !important;
-                width: 100% !important;
-              }
-              
-              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
-              nav li:has(.sub-menu) > a [class*="chevron"],
-              nav li:has(.sub-menu) > a [class*="arrow"],
-              #navMenu li:has(.sub-menu) > a [class*="chevron"],
-              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
-                display: none !important;
-                visibility: hidden !important;
-              }
-              
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
-              .mobile-submenu-toggle {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 44px !important;
-                height: auto !important;
-                background: transparent !important;
-                border: none !important;
-                cursor: pointer !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                position: static !important;
-                flex-shrink: 0 !important;
-                align-self: stretch !important;
-                z-index: 2 !important;
-                -webkit-tap-highlight-color: transparent;
-              }
-              
-              .mobile-submenu-toggle::after {
-                content: '' !important;
-                display: block !important;
-                width: 0 !important;
-                height: 0 !important;
-                border-left: 6px solid transparent !important;
-                border-right: 6px solid transparent !important;
-                border-top: 7px solid currentColor !important;
-                transition: transform 0.3s ease !important;
-              }
-              
-              /* Rotate arrow when expanded */
-              .mobile-submenu-toggle.expanded::after {
-                transform: rotate(180deg) !important;
-              }
-            }
-            
-            /* Hide toggle button on desktop */
-            @media (min-width: 769px) {
-              .mobile-submenu-toggle {
-                display: none !important;
-              }
-            }
-          </style>
-          
-          <script id="zappy-mobile-menu-script">
-            // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
-            (function() {
-              function initMobileMenuToggles() {
-                // Only run on mobile
-                if (window.innerWidth > 768) {
-                  // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
-                    menu.classList.remove('mobile-expanded');
-                  });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
-                  return;
-                }
-                
-                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
-                
-                // Find all parent menu items (items with .sub-menu)
-                const menuItemsWithSubmenus = document.querySelectorAll(
-                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
-                );
-                
-                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
-                
-                menuItemsWithSubmenus.forEach(function(li) {
-                  // Skip if already has toggle button
-                  if (li.querySelector('.mobile-submenu-toggle')) {
-                    return;
-                  }
-                  
-                  const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-                  
-                  if (!submenu || !parentLink) return;
-                  
-                  // Create toggle button
-                  const toggleBtn = document.createElement('button');
-                  toggleBtn.className = 'mobile-submenu-toggle';
-                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
-                  toggleBtn.setAttribute('type', 'button');
-
-                  // Insert toggle button after the link
-                  parentLink.insertAdjacentElement('afterend', toggleBtn);
-                  
-                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
-                  
-                  // Handle toggle button click - only toggles submenu
-                  toggleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isExpanded = submenu.classList.contains('mobile-expanded');
-                    
-                    // Close all other submenus first
-                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
-                      if (menu !== submenu) {
-                        menu.classList.remove('mobile-expanded');
-                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
-                        if (otherToggle) otherToggle.classList.remove('expanded');
-                      }
-                    });
-                    
-                    // Toggle this submenu
-                    submenu.classList.toggle('mobile-expanded');
-                    toggleBtn.classList.toggle('expanded');
-                    
-                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
-                  });
-                  
-                  // Parent link navigates normally - no preventDefault
-                });
-              }
-              
-              // Initialize on DOM load
-              if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
-              } else {
-                initMobileMenuToggles();
-              }
-              
-              // Re-initialize on window resize (but use debounce to avoid too many calls)
-              let resizeTimer;
-              window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(initMobileMenuToggles, 250);
-              });
-              
-              // Also initialize when mobile menu becomes visible
-              // This handles cases where the mobile menu is hidden initially
-              const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    const target = mutation.target;
-                    if (target.classList.contains('active') || target.style.display !== 'none') {
-                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
-                      setTimeout(initMobileMenuToggles, 100);
-                    }
-                  }
-                });
-              });
-              
-              // Observe mobile menu containers
-              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
-              mobileMenus.forEach(function(menu) {
-                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
-              });
-            })();
-          </script>
     <link rel="stylesheet" href="/styles.css">
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: var(--text-dark, #333) !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
+      [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 10px !important; padding-right: 28px !important; }
+      .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus (exclude catalog sub-menus that use <a> children instead of <li>) */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))):not(:has(> a)), .sub-menu:not(:has(li)):not(:has(> a)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 60vh !important; overflow-y: auto !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; min-width: 0 !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; padding: 0 !important; line-height: inherit !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; color: var(--text-dark) !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; padding: 0 !important; margin: 0 !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; color: var(--text-dark) !important; }
+        .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
+        [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 0 !important; padding-right: 28px !important; }
+        .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
+        .nav-menu.active, #navMenu.active { max-width: 100vw !important; overflow-x: hidden !important; box-sizing: border-box !important; }
+        .navbar .sub-menu li a, nav.navbar .sub-menu li a, .zappy-products-dropdown .sub-menu a { color: var(--text-dark) !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
 
     <style id="mobile-lang-menu-deployed-css">
     @media (max-width: 768px) {
@@ -1303,10 +338,10 @@
       <div class="search-wrapper">
         <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
         <button class="search-submit" id="mobile-search-submit" title="חיפוש">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
         </button>
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
@@ -1316,16 +351,16 @@
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
     <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
 
   <button class="phone-header-btn" data-phone="[business_phone]" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
 
@@ -1334,24 +369,27 @@
       <a href="/" class="logo-link">
         <img src="/assets/t-d-global-logo.webp" alt="T.D GLOBAL" class="logo">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/about">אודות</a></li><li><a href="/sectors">סקטורים</a></li><li class="menu-item-has-children zappy-products-dropdown">
+    </div><ul class="nav-menu" id="navMenu">
+
+    <li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
         מוצרים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"/>
+          <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
         <li><a href="/products">כל המוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
-    </li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><div class="nav-search-box">
+    </li>
+  <li><a href="/sectors">סקטורים</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><div class="nav-search-box">
     <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
     </button>
     <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div></div>
 
     
 
@@ -1801,7 +839,7 @@
     <section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="temp-section-1776175616589">
   <!-- Background Image -->
   <div class="index-hero-bg">
-    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Dusk panoramic photograph of a wide illuminated civic boulevard or highway interchange at twilight, with warm amber and cool blue street lighting glowing along the road, creating long light trails, dramatic sky gradient from deep indigo to warm orange on the horizon, global infrastructure scale, no people, clean and atmospheric, photorealistic" width="1440" height="900" src="/assets/site-index-hero-image-1.webp" alt="כביש עירוני מוסר עם גופי תאורה מואר בשעת בין ערביים" class="index-hero-bg-img" data-hero-background="true" data-element-type="image" data-element-id="img-1776245193146-g8ewy1gxn">
+    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Dusk panoramic photograph of a wide illuminated civic boulevard or highway interchange at twilight, with warm amber and cool blue street lighting glowing along the road, creating long light trails, dramatic sky gradient from deep indigo to warm orange on the horizon, global infrastructure scale, no people, clean and atmospheric, photorealistic" width="1440" height="900" src="/assets/site-index-hero-image-1.webp" alt="כביש עירוני מוסר עם גופי תאורה מואר בשעת בין ערביים" class="index-hero-bg-img">
   </div>
 
   <!-- Scrim Overlay -->
@@ -1810,12 +848,12 @@
   <!-- Text Overlay Card -->
   <div class="index-hero-container">
     <div class="index-hero-card">
-      <p class="zappy-editable"><span class="index-hero-eyebrow">ייבוא וייצוא בינלאומי</span>
-      </p><h1 class="index-hero-h1">T.D GLOBAL: כוח, אמינות וחדשנות בתשתיות חשמל ותאורה <strong>בקנה מידה לאומי.</strong></h1>
-      <h3 class="index-hero-subtitle"><strong>השותף האסטרטגי</strong> של ממשלות, עיריות וקבלנים ברחבי העולם. אנו מספקים פתרון End-to-End הכולל כבלי חשמל ותאורה טכנית בעמידה בתקנים המחמירים ביותר, לצד לוגיסטיקה בינלאומית מוכחת ושקט נפשי לכל פרויקט.</h3>
+      <span class="index-hero-eyebrow">ייבוא וייצוא בינלאומי</span>
+      <h1 class="index-hero-h1">T.D GLOBAL — שותף אסטרטגי לתשתיות חשמל ותאורה ברחבי העולם</h1>
+      <h3 class="index-hero-subtitle">אנו מספקים לחברות, ממשלות ועיריות ברחבי העולם כבלי חשמל למתח נמוך וגופי תאורה חוץ לתשתיות בקנה מידה גלובלי — באמינות, מקצועיות ויעילות לוגיסטית מלאה.</h3>
       <div class="index-hero-ctas">
-        <a href="/contact" class="index-hero-btn-primary btn btn-primary" data-element-type="button" data-element-id="btn-1776245193143-sjk6zi0q5" data-native-element="true" style="border-color: rgb(184, 107, 82) !important; color: rgb(255, 255, 255) !important; background-color: rgb(184, 107, 82) !important; background-image: none !important;">צרו קשר</a>
-        <a href="/sectors" class="index-hero-btn-secondary" data-element-type="button" data-element-id="btn-1776245193143-jshx4c82e" data-native-element="true">תחומי פעילות</a>
+        <a href="/contact" class="index-hero-btn-primary">צרו קשר</a>
+        <a href="/sectors" class="index-hero-btn-secondary">תחומי פעילות</a>
       </div>
     </div>
   </div>
@@ -1823,7 +861,7 @@
   <!-- Bottom Divider -->
   <div class="index-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1440,80 L1440,48 Q1380,38 1320,46 T1200,40 Q1140,36 1080,44 T960,38 Q900,42 840,36 T720,42 Q660,46 600,38 T480,44 Q420,40 360,48 T240,42 Q180,38 120,46 T0,40 L0,80 Z" fill="#0A192F"/>
+      <path d="M1440,80 L1440,48 Q1380,38 1320,46 T1200,40 Q1140,36 1080,44 T960,38 Q900,42 840,36 T720,42 Q660,46 600,38 T480,44 Q420,40 360,48 T240,42 Q180,38 120,46 T0,40 L0,80 Z" fill="#F1E7DA"></path>
     </svg>
   </div>
 </section>
@@ -1833,111 +871,46 @@
 
 
 
-    <section class="index-sectors-section" data-layout-spec="בית-sectors" dir="rtl" data-zappy-section="true" id="featured-products">
-  <div class="sectors-container">
-    <!-- Section Header -->
-    <div class="sectors-header">
-      <span class="sectors-eyebrow">תחומי פעילות</span>
-      <h2 class="sectors-title">עולמות היישום של T.D GLOBAL</h2>
-      <p class="sectors-intro">אנו מספקים פתרונות תאורה ותשתית חשמלית לשווקים מגוונים ברחבי העולם — מתשתיות אזרחיות ועירוניות ועד סביבות אירוח ופנאי, לצד אספקת כבלי חשמל אמינים לפרויקטים מוסדיים ותעשייתיים.</p>
-    </div>
-
-    <!-- Sectors Grid -->
-    <div class="sectors-grid">
-
-      <!-- Card 1: Roads & Infrastructure -->
-      <article class="sector-card sector-card--wide">
-        <div class="sector-card__image-wrap">
-          <div class="sector-card__bg" style="background-image: url('assets/site-index-sectors-image-1.webp'); background-size: cover; background-position: center;"></div>
-          <div class="sector-card__overlay"></div>
-          <div class="sector-card__badge">תשתיות אזרחיות</div>
+    <section class="featured-products-section" id="featured-products" data-zappy-dynamic="true">
+      <div class="container">
+        <h2 class="section-title">מוצרים מומלצים</h2>
+        <div class="product-grid featured-grid" id="zappy-featured-products">
+          <div class="loading-products">טוען מוצרים...</div>
         </div>
-        <div class="sector-card__body">
-          <h3 class="sector-card__title">כבישים, מנהרות ושטחים פתוחים</h3>
-          <p class="sector-card__desc">גופי תאורה חוץ לתשתיות תחבורה ועירוניות — כבישים, רחובות, מנהרות, איצטדיונים, מעברי גבול ושטחים פתוחים. פתרונות מאושרים לרשויות, עיריות וממשלות המחפשות אמינות ועמידות לאורך שנים.</p>
-          <div class="sector-card__line"></div>
+        <div class="view-all-products">
+          <a href="/products" class="btn btn-primary">צפה בכל המוצרים →</a>
         </div>
-      </article>
-
-      <!-- Card 2: Parks & Hospitality -->
-      <article class="sector-card">
-        <div class="sector-card__image-wrap">
-          <div class="sector-card__bg" style="background-image: url('assets/site-index-sectors-image-2.webp'); background-size: cover; background-position: center;"></div>
-          <div class="sector-card__overlay"></div>
-          <div class="sector-card__badge">אירוח ופנאי</div>
-        </div>
-        <div class="sector-card__body">
-          <h3 class="sector-card__title">פארקים, מלונות ושדות תעופה</h3>
-          <p class="sector-card__desc">גופי תאורה דקורטיביים המשלבים אסתטיקה ופונקציונליות — לפארקים עירוניים, גינות משחקים, בתי מלון ושדות תעופה. עיצוב שמעשיר את חוויית המשתמש ומחזק את זהות המרחב הציבורי.</p>
-          <div class="sector-card__line"></div>
-        </div>
-      </article>
-
-      <!-- Card 3: Electrical Cables -->
-      <article class="sector-card">
-        <div class="sector-card__image-wrap">
-          <div class="sector-card__bg" style="background-image: url('assets/site-index-sectors-image-3.webp'); background-size: cover; background-position: center;"></div>
-          <div class="sector-card__overlay"></div>
-          <div class="sector-card__badge">כבלי חשמל</div>
-        </div>
-        <div class="sector-card__body">
-          <h3 class="sector-card__title">כבלי חשמל למתח נמוך</h3>
-          <p class="sector-card__desc">אספקת כבלי חשמל למתח נמוך לפרויקטי תשתית ורכש מוסדי — עם אמינות ייצור גבוהה, עמידה בתקנים בינלאומיים ולוגיסטיקה גלובלית מותאמת לדרישות חברות, ממשלות ורשויות מקומיות.</p>
-          <div class="sector-card__line"></div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-
-  <!-- Decorative bottom divider -->
-  <div class="sectors-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,28 Q100,18 200,26 T400,22 Q500,28 600,20 T800,24 Q900,18 1000,26 T1200,22 L1200,60 Z" fill="#0A192F"/>
-    </svg>
-  </div>
-</section>
+      </div>
+    </section>
   
 
-    <section class="index-showcase-section" data-layout-spec="בית-showcase" dir="rtl" data-zappy-section="true" id="featured-categories">
-  <div class="showcase-container">
-    <!-- Section Header -->
-    <div class="showcase-header">
-      <p class="zappy-editable"><span class="showcase-label">הפתרונות שלנו</span>
-      </p><h2 class="showcase-title">מרחבים שמוארים. תשתיות שמחזיקות.</h2>
-      <p class="showcase-intro">T.D GLOBAL מספקת פתרונות תאורה ותשתית חשמלית לפרויקטים בקנה מידה גלובלי — מכבישים ומנהרות ועד פארקים, בתי מלון ושדות תעופה. כל פרויקט מתחיל בשותף שמבין את הצרכים האמיתיים בשטח.</p>
-    </div>
-
-    <!-- Showcase Grid -->
-    
-  </div>
-
-  <!-- Bottom Divider -->
-  <div class="showcase-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,70 L0,38 Q100,28 200,36 T400,30 Q500,24 600,32 T800,26 Q900,20 1000,30 T1200,24 L1200,70 Z" fill="#0A192F"/>
-    </svg>
-  </div>
-</section>
+    <section class="featured-categories-section" id="featured-categories" data-zappy-dynamic="true">
+      <div class="container">
+        <h2 class="section-title">קנו לפי קטגוריה</h2>
+        <div class="category-blocks" id="zappy-featured-categories">
+          <div class="loading-categories">טוען מוצרים...</div>
+        </div>
+      </div>
+    </section>
   
 
-<section class="index-sectors-section" data-layout-spec="בית-sectors" dir="rtl" id="index-sectors-section">
+<section class="index-sectors-section" data-layout-spec="בית-sectors" dir="rtl">
   <div class="index-sectors-container">
 
     <!-- Intro Block -->
     <div class="index-sectors-intro">
-      <p class="zappy-editable"><span class="index-sectors-eyebrow">תחומי פעילות</span>
-      </p><h2 class="index-sectors-heading">עולמות היישום של T.D GLOBAL</h2>
+      <span class="index-sectors-eyebrow">תחומי פעילות</span>
+      <h2 class="index-sectors-heading">עולמות היישום של T.D GLOBAL</h2>
       <p class="index-sectors-subtext">אנו מספקים פתרונות תאורה ותשתית חשמלית לשווקים מגוונים ברחבי העולם — מתשתיות אזרחיות ועירוניות ועד סביבות אירוח ופנאי, לצד אספקת כבלי חשמל אמינים לפרויקטים מוסדיים ותעשייתיים.</p>
     </div>
 
     <!-- Cards Grid -->
-    <div class="index-sectors-grid zappy-preserve-css-grid" id="zappy-auto-grid-1776245193154-0zth35" data-zappy-auto-grid="true" data-original-item-width="384" data-original-gap="24px" style="--zappy-grid-cols: repeat(3, minmax(0, 1fr)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+    <div class="index-sectors-grid">
 
       <!-- Card 1: Civic & Transport Infrastructure -->
-      <article class="index-sectors-card" data-grid-item-index="0">
+      <article class="index-sectors-card">
         <figure class="index-sectors-card-figure">
-          <img data-placeholder="index-sectors-image-1" data-context="Wide-angle night photograph of a modern highway interchange or tunnel entrance illuminated by powerful LED road lighting fixtures. The scene shows multiple lanes of traffic with orange and white light trails, professional infrastructure lighting mounted on tall poles, and a sense of scale and civic engineering quality. Warm amber and cool white tones. Atmospheric and dramatic." width="600" height="380" src="/assets/site-index-sectors-image-1.webp" alt="תאורת כבישים ותשתיות תחבורה — גופי תאורה לכבישים, מנהרות ומעברי גבול" data-element-type="image" data-element-id="img-1776245193146-nivh07rkz" style>
+          <img data-placeholder="index-sectors-image-1" data-context="Wide-angle night photograph of a modern highway interchange or tunnel entrance illuminated by powerful LED road lighting fixtures. The scene shows multiple lanes of traffic with orange and white light trails, professional infrastructure lighting mounted on tall poles, and a sense of scale and civic engineering quality. Warm amber and cool white tones. Atmospheric and dramatic." width="600" height="380" src="/assets/site-index-sectors-image-1.webp" alt="תאורת כבישים ותשתיות תחבורה — גופי תאורה לכבישים, מנהרות ומעברי גבול">
         </figure>
         <div class="index-sectors-card-body">
           <div class="index-sectors-card-tag">תשתיות אזרחיות</div>
@@ -1947,9 +920,9 @@
       </article>
 
       <!-- Card 2: Hospitality & Decorative Lighting -->
-      <article class="index-sectors-card" data-grid-item-index="1">
+      <article class="index-sectors-card">
         <figure class="index-sectors-card-figure">
-          <img data-placeholder="index-sectors-image-2" data-context="Beautiful dusk photograph of a modern public park or hotel courtyard with elegant decorative lighting fixtures. Warm glowing lanterns line a pedestrian path surrounded by manicured greenery. The atmosphere is inviting and premium, with soft golden light reflecting off stone pathways. Suitable for luxury hospitality or municipal parks. Warm tones, editorial quality." width="600" height="380" src="/assets/site-index-sectors-image-2.webp" alt="תאורה דקורטיבית לפארקים, בתי מלון ושדות תעופה" data-element-type="image" data-element-id="img-1776245193146-epd2thbh0" style>
+          <img data-placeholder="index-sectors-image-2" data-context="Beautiful dusk photograph of a modern public park or hotel courtyard with elegant decorative lighting fixtures. Warm glowing lanterns line a pedestrian path surrounded by manicured greenery. The atmosphere is inviting and premium, with soft golden light reflecting off stone pathways. Suitable for luxury hospitality or municipal parks. Warm tones, editorial quality." width="600" height="380" src="/assets/site-index-sectors-image-2.webp" alt="תאורה דקורטיבית לפארקים, בתי מלון ושדות תעופה">
         </figure>
         <div class="index-sectors-card-body">
           <div class="index-sectors-card-tag">אירוח ופנאי</div>
@@ -1959,9 +932,9 @@
       </article>
 
       <!-- Card 3: Electrical Cables -->
-      <article class="index-sectors-card" data-grid-item-index="2">
+      <article class="index-sectors-card">
         <figure class="index-sectors-card-figure">
-          <img data-placeholder="index-sectors-image-3" data-context="Professional close-up or medium shot of organized low-voltage electrical cables in an industrial or construction setting. Large spools of copper electrical cables in orange and grey insulation, neatly arranged in a warehouse or on a large infrastructure project site. The image conveys reliability, scale, and technical quality. Clean industrial aesthetic with warm tones." width="600" height="380" src="/assets/site-index-sectors-image-3.webp" alt="ייבוא כבלי חשמל למתח נמוך לפרויקטי תשתית" data-element-type="image" data-element-id="img-1776245193146-s7yit8had" style>
+          <img data-placeholder="index-sectors-image-3" data-context="Professional close-up or medium shot of organized low-voltage electrical cables in an industrial or construction setting. Large spools of copper electrical cables in orange and grey insulation, neatly arranged in a warehouse or on a large infrastructure project site. The image conveys reliability, scale, and technical quality. Clean industrial aesthetic with warm tones." width="600" height="380" src="/assets/site-index-sectors-image-3.webp" alt="ייבוא כבלי חשמל למתח נמוך לפרויקטי תשתית">
         </figure>
         <div class="index-sectors-card-body">
           <div class="index-sectors-card-tag">כבלי חשמל</div>
@@ -1977,15 +950,179 @@
   <!-- Bottom Divider: dusty blue wave transitioning to darker section -->
   <div class="index-sectors-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,72 L0,38 Q80,28 180,36 T360,30 Q480,24 600,34 T840,28 Q960,22 1080,32 T1260,26 Q1350,22 1440,30 L1440,72 Z" fill="#2F261F"/>
+      <path d="M0,72 L0,38 Q80,28 180,36 T360,30 Q480,24 600,34 T840,28 Q960,22 1080,32 T1260,26 Q1350,22 1440,30 L1440,72 Z" fill="#0000E6"></path>
     </svg>
   </div>
 
 </section>
 
+<section class="index-capabilities-section" data-layout-spec="בית-capabilities" dir="rtl">
+  <div class="index-capabilities-container">
 
+    <!-- Content Column (START = RIGHT in RTL) -->
+    <div class="index-capabilities-content">
+      <div class="index-capabilities-header">
+        <span class="index-capabilities-label">היכולות שלנו</span>
+        <h2 class="index-capabilities-title">שותף סחר בינלאומי<br>שניתן לסמוך עליו</h2>
+        <p class="index-capabilities-intro">T.D GLOBAL פועלת כגורם מקצועי ואמין בשרשרת הייבוא וייצוא הגלובלית — מול חברות, ממשלות ורשויות מקומיות ברחבי העולם. אנו מחברים בין ספקים מובילים לבין פרויקטים תשתיתיים בקנה מידה גדול, עם ליווי מלא לאורך כל שלבי העסקה.</p>
+      </div>
 
+      <!-- 2x2 Capability Grid -->
+      <div class="index-capabilities-grid">
 
+        <article class="index-cap-block">
+          <div class="index-cap-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <div class="index-cap-body">
+            <h3 class="index-cap-title">רכש ותיאום בינלאומי</h3>
+            <p class="index-cap-text">איתור ספקים אסטרטגיים ברחבי העולם, ניהול משא ומתן, ותיאום לוגיסטי מלא — מהמפעל ועד ליעד הסופי.</p>
+          </div>
+        </article>
+
+        <article class="index-cap-block">
+          <div class="index-cap-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div class="index-cap-body">
+            <h3 class="index-cap-title">תמיכה במכרזים ותיעוד</h3>
+            <p class="index-cap-text">הכנת תיעוד טכני, תעודות תאימות ומפרטים מקצועיים המותאמים לדרישות מכרזים ממשלתיים ועירוניים.</p>
+          </div>
+        </article>
+
+        <article class="index-cap-block">
+          <div class="index-cap-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <div class="index-cap-body">
+            <h3 class="index-cap-title">התאמה למפרט הפרויקט</h3>
+            <p class="index-cap-text">כבלי חשמל למתח נמוך וגופי תאורה לכבישים, מנהרות ושטחים פתוחים — מותאמים במדויק לדרישות הטכניות של כל פרויקט.</p>
+          </div>
+        </article>
+
+        <article class="index-cap-block">
+          <div class="index-cap-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="index-cap-body">
+            <h3 class="index-cap-title">תקשורת מקצועית ורציפה</h3>
+            <p class="index-cap-text">ממשק ישיר ואמין מול גופים מוסדיים ומסחריים, עם מענה מהיר, שקיפות מלאה ויחסי עבודה ארוכי טווח.</p>
+          </div>
+        </article>
+
+      </div>
+      <!-- End Grid -->
+
+      <p class="index-capabilities-closing">אנו מאמינים בשותפות עסקית אמיתית — לא עסקה חד-פעמית. T.D GLOBAL מחויבת לספק פתרונות תשתית ותאורה בינלאומיים בסטנדרט הגבוה ביותר, עם ליווי צמוד מהשלב הראשון ועד לאספקה בפועל.</p>
+    </div>
+    <!-- End Content Column -->
+
+    <!-- Image Column (END = LEFT in RTL) -->
+    <div class="index-capabilities-image-col">
+      <div class="index-capabilities-backplate" aria-hidden="true"></div>
+      <div class="index-capabilities-img-wrap">
+        <img data-placeholder="index-capabilities-image-1" data-context="Professional infrastructure and electrical trade scene: a large-scale outdoor road lighting installation at dusk, featuring tall LED street light poles illuminating a modern highway or boulevard, with low-voltage electrical cable reels in the foreground. Warm golden light contrasts against a deep blue twilight sky. The scene conveys international-grade infrastructure supply, B2B trade readiness, and technical precision. Cinematic, editorial quality." width="540" height="720" src="/assets/site-index-capabilities-image-1.webp" alt="תאורת רחובות ותשתית חשמל בינלאומית — T.D GLOBAL">
+      </div>
+    </div>
+    <!-- End Image Column -->
+
+  </div>
+
+  <!-- Bottom Torn-Paper Divider transitioning to light section -->
+  <div class="index-capabilities-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,90 L0,44 Q30,38 60,46 T130,40 Q170,35 210,43 T290,37 Q340,42 390,36 T470,41 Q520,38 570,44 T650,38 Q700,42 750,36 T830,41 Q880,37 930,44 T1010,38 Q1060,43 1110,37 T1190,42 Q1220,38 1260,44 T1340,39 Q1390,43 1440,38 L1440,90 Z" fill="#EFE7DC"></path>
+    </svg>
+  </div>
+
+</section>
+
+<section class="index-showcase-section" data-layout-spec="בית-showcase" dir="rtl" id="zappy-section-3">
+  <div class="showcase-container">
+    <!-- Header -->
+    <div class="showcase-header">
+      <h2 class="showcase-title">מרחבים שמוארים. תשתיות שמחזיקות.</h2>
+      <p class="showcase-subtitle">T.D GLOBAL מספקת פתרונות תאורה ותשתית חשמלית לפרויקטים בקנה מידה גלובלי — מכבישים ומנהרות ועד פארקים, בתי מלון ושדות תעופה. כל פרויקט מתחיל בשותף שמבין את הצרכים האמיתיים בשטח.</p>
+    </div>
+
+    <!-- Asymmetric Grid -->
+    <div class="showcase-grid zappy-preserve-css-grid" data-zappy-grid-align="start" data-original-item-width="517" data-original-gap="24px" style="--zappy-grid-cols: 517.203px 594.781px; grid-template-columns: 517.203px 594.781px; align-items: stretch !important;" data-zappy-explicit-columns="true">
+      <!-- Large tile - START side (right in RTL) -->
+      <article class="showcase-tile showcase-tile--large" data-grid-item-index="0">
+        <figure class="showcase-figure">
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1775744390198-9kv9mh0fi" data-element-type="image" data-zappy-zoom-wrapper-width="525px" data-zappy-zoom-wrapper-height="490px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 525px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 490px !important; display: block !important;"><img data-placeholder="index-showcase-image-1" data-context="Wide dramatic photograph of a modern highway tunnel at night with rows of powerful LED road lights illuminating the tunnel ceiling and walls, creating a safe glowing corridor, warm amber and cool white light mix, infrastructure photography, atmospheric and cinematic" width="600" height="780" src="/assets/site-index-showcase-image-1.webp" alt="תאורת מנהרה — ראות בטוחה בכל תנאי" data-element-type="image" data-element-id="img-1775744390198-9kv9mh0fi" style="object-position: 50% 50% !important; display: block; margin-top: 0px !important; margin-bottom: 0px !important; left: -1% !important; top: -21.8146% !important; width: 102% !important; height: 143.629% !important; max-width: none !important; max-height: none !important; object-fit: cover !important;" data-zappy-zoom="1.02" data-zappy-object-position="50% 50%"></div>
+          <figcaption class="showcase-caption">
+            <span class="caption-tag">מנהרות וכבישים</span>
+            <p class="caption-text">ראות מלאה, בטיחות מוכחת — גופי תאורה לכבישים ומנהרות שמאירים כל מסלול.</p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <!-- Three smaller tiles - END side (left in RTL) -->
+      <div class="showcase-tiles-stack" data-grid-item-index="1">
+        <article class="showcase-tile showcase-tile--small">
+          <figure class="showcase-figure">
+            <img data-placeholder="index-showcase-image-2" data-context="Aerial or ground-level photograph of a large outdoor stadium at dusk with powerful floodlights illuminating the pitch, dramatic lighting against a twilight sky, infrastructure scale, professional sports venue, impressive and cinematic" width="580" height="240" src="/assets/site-index-showcase-image-2.webp" alt="תאורת איצטדיון — עוצמה בקנה מידה גדול" data-element-type="image" data-element-id="img-1775744390198-lui7o805v" >
+            <figcaption class="showcase-caption">
+              <span class="caption-tag">איצטדיונים ושטחים פתוחים</span>
+              <p class="caption-text">עוצמה, כיסוי ואחידות — תאורה לאיצטדיונים ומעברי גבול.</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="showcase-tile showcase-tile--small">
+          <figure class="showcase-figure">
+            <img data-placeholder="index-showcase-image-3" data-context="Beautiful evening photograph of a public park with elegant decorative street lamp posts casting warm golden light on tree-lined pathways, people walking, inviting and atmospheric, municipal park lighting, warm tones, editorial quality" width="580" height="240" src="/assets/site-index-showcase-image-3.webp" alt="תאורה דקורטיבית לפארקים וגינות ציבוריות" data-element-type="image" data-element-id="img-1775744390198-0vs3ow91j" >
+            <figcaption class="showcase-caption">
+              <span class="caption-tag">פארקים וגינות ציבוריות</span>
+              <p class="caption-text">אווירה חמה ומזמינה — גופי תאורה דקורטיביים לפארקים ומרחבים עירוניים.</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="showcase-tile showcase-tile--small">
+          <figure class="showcase-figure">
+            <div data-zappy-zoom-wrapper="true" data-element-id="img-1775744390198-3xdoir4lv" data-element-type="image" data-zappy-zoom-wrapper-width="605px" data-zappy-zoom-wrapper-height="184px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 605px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 184px !important; display: block !important;"><img data-placeholder="index-showcase-image-4" data-context="Interior or exterior photograph of a luxury hotel entrance or airport terminal at night with sophisticated architectural lighting, warm white LED fixtures, elegant and welcoming atmosphere, hospitality lighting design, premium quality" width="580" height="240" src="/assets/site-index-showcase-image-4.webp" alt="תאורת אירוח ושדות תעופה — אווירה ומקצועיות" data-element-type="image" data-element-id="img-1775744390198-3xdoir4lv" style="object-position: 50% 50%; margin: 0px !important; left: -1% !important; top: -41.8022% !important; width: 102% !important; height: 183.604% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.02"></div>
+            <figcaption class="showcase-caption">
+              <span class="caption-tag">בתי מלון ושדות תעופה</span>
+              <p class="caption-text">עיצוב אור שמעצב חוויה — תאורה לסביבות אירוח ותחבורה ברמה בינלאומית.</p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    <!-- Accent rule -->
+    <div class="showcase-rule" aria-hidden="true"></div>
+  </div>
+
+  <!-- Bottom arc divider transitioning to dark CTA section -->
+  <div class="showcase-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Olive accent line tracing the arc top edge -->
+      <path d="M0,68 Q360,18 720,14 Q1080,10 1440,62" fill="#2F261F" stroke="var(--accent)" stroke-width="2" opacity="0.72"></path>
+      <!-- Deep espresso arc fill -->
+      <path d="M0,100 L0,70 Q360,20 720,16 Q1080,12 1440,64 L1440,100 Z" fill="#2F261F"></path>
+    </svg>
+  </div>
+</section>
 
 <section class="index-cta-section" data-layout-spec="בית-cta" dir="rtl">
   <div class="index-cta-inner">
