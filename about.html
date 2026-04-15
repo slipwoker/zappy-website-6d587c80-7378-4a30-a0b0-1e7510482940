@@ -245,6 +245,305 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.about-story-section {
+  position: relative;
+  overflow: visible;
+  background-color: #FAF5EE;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(212,175,55,0.10) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(112,128,144,0.08) 0%, transparent 40%),
+    linear-gradient(180deg, #FAF5EE 0%, #F1E7DA 100%);
+  color: var(--text-dark);
+  padding: 120px 0 90px;
+  direction: rtl;
+}
+
+.about-story-section .about-story-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 80px;
+  align-items: center;
+  direction: rtl;
+}
+
+/* ── Content Column ── */
+.about-story-section .about-story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-story-section .about-story-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.about-story-section .label-line {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.about-story-section .label-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.about-story-section .about-story-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin: 0 0 28px 0;
+  text-align: right;
+}
+
+.about-story-section .about-story-body {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  text-align: right;
+  margin: 0 0 20px 0;
+  opacity: 0.88;
+}
+
+/* ── Pillars ── */
+.about-story-section .about-story-pillars {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  margin-top: 36px;
+  border-top: 1px solid rgba(201,183,160,0.7);
+  padding-top: 28px;
+}
+
+.about-story-section .pillar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex: 1;
+  padding: 0 0 0 16px;
+  border-inline-start: 1px solid rgba(201,183,160,0.55);
+  text-align: right;
+}
+
+.about-story-section .pillar-item:last-child {
+  border-inline-start: none;
+  padding-inline-start: 0;
+}
+
+.about-story-section .pillar-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #FFF8EE 0%, #F5E8D0 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(212,175,55,0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  box-shadow: 0 4px 12px rgba(212,175,55,0.15);
+  flex-shrink: 0;
+}
+
+.about-story-section .pillar-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* ── Image Column ── */
+.about-story-section .about-story-image-col {
+  position: relative;
+}
+
+.about-story-section .about-story-image-frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 52px rgba(82,58,34,0.22);
+}
+
+.about-story-section .about-story-image-accent-bar {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+  z-index: 3;
+  border-radius: 0 18px 18px 0;
+}
+
+.about-story-section .about-story-img {
+  display: block;
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative offset block behind image */
+.about-story-section .about-story-image-col::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: -22px;
+  bottom: -22px;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  border: 2px solid rgba(212,175,55,0.30);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Badge overlay on image */
+.about-story-section .about-story-image-badge {
+  position: absolute;
+  bottom: 28px;
+  inset-inline-start: 28px;
+  background: rgba(249,243,235,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.50);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  box-shadow: 0 8px 24px rgba(61,45,31,0.18);
+  z-index: 5;
+  min-width: 140px;
+}
+
+.about-story-section .badge-number {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.about-story-section .badge-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  text-align: right;
+  opacity: 0.75;
+}
+
+/* ── Bottom Divider ── */
+.about-story-section .about-story-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.about-story-section .about-story-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .about-story-section .about-story-inner {
+    grid-template-columns: 1fr 380px;
+    gap: 50px;
+    padding: 0 28px;
+  }
+  .about-story-section .about-story-img {
+    height: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-story-section {
+    padding: 100px 0 80px;
+  }
+  .about-story-section .about-story-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  /* On mobile, image column comes second (below content) */
+  .about-story-section .about-story-image-col {
+    order: 2;
+  }
+  .about-story-section .about-story-content {
+    order: 1;
+  }
+  .about-story-section .about-story-heading {
+    font-size: 2rem;
+  }
+  .about-story-section .about-story-img {
+    height: 320px;
+  }
+  .about-story-section .about-story-image-col::before {
+    display: none;
+  }
+  .about-story-section .about-story-pillars {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 24px;
+  }
+  .about-story-section .pillar-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    border-inline-start: none;
+    border-bottom: 1px solid rgba(201,183,160,0.45);
+    padding: 0 0 20px 0;
+  }
+  .about-story-section .pillar-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .about-story-section .about-story-image-badge {
+    bottom: 16px;
+    inset-inline-start: 16px;
+    padding: 10px 14px;
+    min-width: 120px;
+  }
+  .about-story-section .badge-number {
+    font-size: 1.5rem;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -836,50 +1135,68 @@
 </script>
   
   <main>
-    <section class="about-story-section" data-layout-spec="אודות-story" dir="rtl">
-  <div class="about-story-container">
-    <div class="about-story-grid">
+    <section class="about-story-section" data-layout-spec="אודות-story" dir="rtl" data-zappy-section="true">
+  <div class="about-story-inner">
 
-      <!-- Text Column (START = RIGHT in RTL) -->
-      <div class="about-story-text-col">
-        <span class="about-story-eyebrow">הסיפור שלנו</span>
-        <h1 class="about-story-heading">שותפות בינלאומית<br>לתשתיות האור של המחר</h1>
-        <div class="about-story-divider-line"></div>
-        <p class="about-story-para">T.D GLOBAL נולדה מתוך הבנה עמוקה שפרויקטי תשתית ותאורה בקנה מידה גדול דורשים יותר מסתם ספק — הם דורשים שותף אמין שמבין את הצרכים המקצועיים של חברות, ממשלות ורשויות מקומיות ברחבי העולם. אנו מתמחים בייבוא וייצוא כבלי חשמל למתח נמוך וגופי תאורה חוץ לפרויקטים בסדר גודל לאומי ובינלאומי — מכבישים ומנהרות ועד לאיצטדיונים, מעברי גבול ושטחים פתוחים.</p>
-        <p class="about-story-para">אנו מחברים בין מקורות אספקה גלובליים לבין הצרכים הפרקטיים של לקוחותינו — עם גמישות, מהירות ורמת מקצועיות שמתאימה לסטנדרטים הגבוהים ביותר של רכש ציבורי ומסחרי. מגופי תאורה דקורטיביים לפארקים, גינות ובתי מלון ועד לפתרונות תאורת רחובות לעיריות ורשויות מקומיות — T.D GLOBAL כאן כדי להאיר את הדרך.</p>
-        <div class="about-story-badges">
-          <div class="about-story-badge">
-            <i class="fa-solid fa-globe" aria-hidden="true"></i>
-            <span>פעילות גלובלית</span>
-          </div>
-          <div class="about-story-badge">
-            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-            <span>כבלי חשמל ותאורה</span>
-          </div>
-          <div class="about-story-badge">
-            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-            <span>שותפות B2B</span>
-          </div>
-        </div>
+    <!-- Right: Content Column -->
+    <div class="about-story-content">
+
+      <div class="about-story-label">
+        <span class="label-line"></span>
+        <span class="label-text">הסיפור שלנו</span>
       </div>
 
-      <!-- Image Column (END = LEFT in RTL) -->
-      <div class="about-story-image-col">
-        <div class="about-story-image-wrapper">
-          <img data-placeholder="about-story-image-1" data-context="A refined civic environment at dusk — a beautifully lit modern boulevard or public square with elegant street lighting poles casting warm golden light on pedestrian paths, lush greenery, and clean urban infrastructure. The atmosphere is calm, professional, and aspirational, suggesting quality outdoor lighting in a large-scale municipal or hospitality context. Shot from a slightly elevated angle, editorial photography style, warm tones." width="600" height="780" src="/assets/site-about-story-image-1.webp" alt="תאורת רחובות ותשתיות תאורה מקצועיות של T.D GLOBAL">
-          <div class="about-story-image-accent"></div>
+      <h1 class="about-story-heading">שותפות בינלאומית<br>לתשתיות האור של המחר</h1>
+
+      <p class="about-story-body">T.D GLOBAL נולדה מתוך הבנה עמוקה שפרויקטי תשתית ותאורה בקנה מידה גדול דורשים יותר מסתם ספק — הם דורשים שותף אמין שמבין את הצרכים המקצועיים של חברות, ממשלות ורשויות מקומיות ברחבי העולם. אנו מתמחים בייבוא וייצוא כבלי חשמל למתח נמוך וגופי תאורה חוץ לפרויקטים בסדר גודל לאומי ובינלאומי — מכבישים ומנהרות ועד לאיצטדיונים, מעברי גבול ושטחים פתוחים.</p>
+
+      <p class="about-story-body">אנו מחברים בין מקורות אספקה גלובליים לבין הצרכים הפרקטיים של לקוחותינו — עם גמישות, מהירות ורמת מקצועיות שמתאימה לסטנדרטים הגבוהים ביותר של רכש ציבורי ומסחרי. מגופי תאורה דקורטיביים לפארקים, גינות ובתי מלון ועד לפתרונות תאורת רחובות לעיריות ורשויות מקומיות — T.D GLOBAL כאן כדי להאיר את הדרך.</p>
+
+      <!-- Pillars Row -->
+      <div class="about-story-pillars">
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <span class="pillar-label">פעילות גלובלית</span>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <span class="pillar-label">כבלי חשמל ותאורה</span>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <span class="pillar-label">שותפות B2B</span>
         </div>
       </div>
 
     </div>
+
+    <!-- Left: Image Column -->
+    <div class="about-story-image-col">
+      <div class="about-story-image-frame">
+        <div class="about-story-image-accent-bar"></div>
+        <img alt="תאורת רחובות ותשתיות תאורה מקצועיות של T.D GLOBAL" class="about-story-img" width="560" height="680" src="/assets/site-about-story-image-1.webp" data-placeholder="about-story-image-1" data-context="A refined civic environment at dusk — a beautifully lit modern boulevard or public square with elegant street lighting poles casting warm golden light on pedestrian paths, lush greenery, and clean urban infrastructure. The atmosphere is calm, professional, and aspirational, suggesting quality outdoor lighting in a large-scale municipal or hospitality context. Shot from a slightly elevated angle, editorial photography style, warm tones." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <div class="about-story-image-badge">
+          <span class="badge-number">100%</span>
+          <span class="badge-text">מחויבות בינלאומית</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Bottom Divider: shallow dipped cream edge transitioning to dark section -->
+  <!-- Decorative bottom divider -->
   <div class="about-story-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,72 L0,36 Q150,12 300,30 Q450,48 600,22 Q750,0 900,28 Q1050,50 1200,32 L1200,72 Z" fill="#2E4358"></path>
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,70 L0,38 Q100,28 200,35 T400,30 Q500,26 600,33 T800,28 Q900,24 1000,32 T1200,30 L1200,70 Z" fill="#D4AF37"></path>
     </svg>
   </div>
+
 </section>
 
 <section class="about-values-section" data-layout-spec="אודות-values" dir="rtl">

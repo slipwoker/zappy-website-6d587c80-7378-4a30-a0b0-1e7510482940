@@ -389,40 +389,312 @@
     </nav>
   <main class="page-container ecommerce-page">
     
-        <section class="products-section">
-          <h1 id="products-page-title">המוצרים שלנו</h1>
-          <div class="products-toolbar" id="products-toolbar" style="display:none;">
-            <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" style="display:none;" aria-label="סינון">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h4"></path></svg>
-              <span>סינון</span>
-            </button>
-            <div class="toolbar-left">
-              <span class="products-count" id="products-count"></span>
-            </div>
-            <div class="toolbar-right">
-              <div class="sort-control" id="sort-control" style="display:none;">
-                <select id="sort-select" aria-label="מיון">
-                </select>
-              </div>
-              <div class="view-toggle" id="view-toggle" style="display:none;">
-                <button class="view-btn active" data-view="grid" aria-label="תצוגת רשת">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
-                </button>
-                <button class="view-btn" data-view="list" aria-label="תצוגת רשימה">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="products-layout" id="products-layout">
-            <aside class="product-sidebar" id="product-sidebar" style="display:none;"></aside>
-            <div class="products-main">
-              <div class="product-grid" id="zappy-product-grid">
-                <div class="loading-products">טוען מוצרים...</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--gradient-light-section);position:relative;overflow:hidden;padding:80px 0 120px;" data-zappy-section="true" class="section">
+<style>
+  .products-hero-section {
+    direction: rtl;
+    font-family: system-ui, sans-serif;
+  }
+  .products-bg-shapes {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .products-bg-shapes::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(94,124,138,0.13) 0%, transparent 70%);
+  }
+  .products-bg-shapes::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,107,82,0.10) 0%, transparent 70%);
+  }
+  .products-diagonal-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    clip-path: polygon(0 0, 38% 0, 28% 100%, 0 100%);
+    background: linear-gradient(160deg, rgba(94,124,138,0.08) 0%, rgba(184,107,82,0.06) 100%);
+    pointer-events: none;
+  }
+  .products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 10;
+  }
+  .products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  .products-title-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .products-title-line {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    margin-bottom: 16px;
+    animation: lineSlide 0.8s ease forwards;
+  }
+  @keyframes lineSlide {
+    from { width: 0; opacity: 0; }
+    to { width: 60px; opacity: 1; }
+  }
+  .products-main-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin: 0;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    position: relative;
+  }
+  .products-main-title span {
+    position: relative;
+    display: inline-block;
+  }
+  .products-main-title span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: rgba(184,107,82,0.22);
+    border-radius: 4px;
+    z-index: -1;
+  }
+  .products-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: var(--gradient-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-btn);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: system-ui, sans-serif;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-hover);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+  }
+  .products-filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: var(--gradient-gold-shine);
+    transition: left 0.5s ease;
+  }
+  .products-filter-btn:hover::before {
+    left: 100%;
+  }
+  .products-filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-btn-hover);
+  }
+  .products-filter-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+  .products-empty-state {
+    position: relative;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(94,124,138,0.18);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-elevated);
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .products-empty-state::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+  }
+  .products-empty-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .products-icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gradient-light-section);
+    border: 2px solid rgba(94,124,138,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-hover);
+    animation: floatBob 3s ease-in-out infinite;
+  }
+  .products-icon-circle:nth-child(2) {
+    animation-delay: 0.5s;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(94,124,138,0.12), rgba(184,107,82,0.10));
+    border-color: rgba(184,107,82,0.25);
+  }
+  .products-icon-circle:nth-child(3) {
+    animation-delay: 1s;
+  }
+  .products-icon-circle:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: var(--shadow-card);
+  }
+  @keyframes floatBob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .products-empty-text {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--text-muted);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+  }
+  .products-decorative-dots {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    opacity: 0.3;
+  }
+  .products-decorative-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: block;
+  }
+  .products-bottom-divider {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 70px;
+    pointer-events: none;
+    z-index: 5;
+  }
+  @media (max-width: 768px) {
+    .products-hero-section {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important;
+    }
+    .products-container {
+      padding: 0 20px;
+    }
+    .products-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .products-empty-state {
+      padding: 50px 24px;
+    }
+    .products-icon-circle {
+      width: 50px;
+      height: 50px;
+    }
+    .products-icon-circle:nth-child(2) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+</style>
+
+<div class="products-bg-shapes"></div>
+<div class="products-diagonal-accent"></div>
+
+<div class="products-container products-hero-section" style="padding-top:80px;padding-bottom:120px;">
+
+  <div class="products-header">
+    <div class="products-title-wrap">
+      <span class="products-title-line"></span>
+      <h1 class="products-main-title"><span>המוצרים שלנו</span></h1>
+    </div>
+    <button class="products-filter-btn" type="button">
+      <svg class="products-filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+      סינון
+    </button>
+  </div>
+
+  <div class="products-empty-state">
+    <div class="products-decorative-dots">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+    <div class="products-empty-icons">
+      <div class="products-icon-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+      </div>
+      <div class="products-icon-circle">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+      </div>
+      <div class="products-icon-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+      </div>
+    </div>
+    <p class="products-empty-text">אין מוצרים להצגה כרגע</p>
+  </div>
+
+</div>
+
+<div class="products-bottom-divider">
+  <svg viewBox="0 0 1200 70" preserveAspectRatio="none" style="display:block;width:100%;height:100%;">
+    <path d="M0,70 C400,10 800,10 1200,70 L1200,70 L0,70 Z" fill="rgba(255,255,255,0.6)"></path>
+  </svg>
+</div>
+
+</section>
       
   </main>
   
