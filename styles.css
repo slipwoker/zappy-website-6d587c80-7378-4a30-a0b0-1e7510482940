@@ -8402,7 +8402,7 @@ a, button {
 .status-processing { background: #dbeafe; color: #526c78; }
 .status-shipped { background: #e0e7ff; color: #526c78; }
 .status-delivered { background: #d1fae5; color: #56717e; }
-.status-cancelled { background: #fee2e2; color: #98553f; }
+.status-cancelled { background: #fee2e2; color: #756834; }
 .order-info-row {
   display: flex;
   justify-content: space-between;
@@ -8901,7 +8901,7 @@ a, button {
 .subcategory-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
 .subcategory-card.active { border-color: var(--accent); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
 .subcategory-card-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.3s ease; }
-.subcategory-card-bg-empty { background: linear-gradient(135deg, var(--accent), #6366f1); }
+.subcategory-card-bg-empty { background: linear-gradient(135deg, var(--accent), #A9974B); }
 .subcategory-card:hover .subcategory-card-bg { transform: scale(1.08); }
 .subcategory-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.05) 100%); }
 .subcategory-card-name { position: relative; z-index: 1; color: #fff; font-size: 0.85rem; font-weight: 600; text-shadow: 0 1px 4px rgba(0,0,0,0.4); padding: 8px 10px; text-align: center; line-height: 1.2; }
@@ -11172,7 +11172,7 @@ main,
   transition: transform 0.3s ease !important;
 }
 .subcategory-card-bg-empty {
-  background: linear-gradient(135deg, var(--accent), #6366f1) !important;
+  background: linear-gradient(135deg, var(--accent), #A9974B) !important;
 }
 .subcategory-card:hover .subcategory-card-bg {
   transform: scale(1.08) !important;
@@ -11635,6 +11635,10 @@ body.accessibility-widget-visible ._access-menu {
     display: none !important;
   }
 }
+
+
+
+
 
 
 
@@ -12298,6 +12302,12 @@ section[data-hero-type] {
 /* ========== END HORIZONTAL-PAIR GRID MEDIA FIX ========== */
 
 /* ========== END GRID RESPONSIVE FIX ========== */
+
+/* RTL footer contact: icon on the right (start) side, text on the left */
+html[dir="rtl"] .footer-contact li, html[dir="rtl"] .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li { flex-direction: row !important; justify-content: flex-start !important; }
+html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
+html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
+html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 
 /* ZAPPY_VARIANT_OPTION_STATES */
