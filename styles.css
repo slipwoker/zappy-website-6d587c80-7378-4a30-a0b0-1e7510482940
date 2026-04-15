@@ -11692,6 +11692,52 @@ body { font-family: 'Montserrat', sans-serif; font-weight: 400; }
 h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
 
 
+.index-sectors-section,
+.index-showcase-section,
+.featured-products-section,
+.featured-categories-section {
+  background: var(--background-color) !important;
+  background-image: none !important;
+}
+
+.index-showcase-section .showcase-title {
+  color: #0A192F !important;
+}
+
+.index-showcase-section .showcase-intro,
+.index-showcase-section .showcase-subtitle {
+  color: var(--secondary-color) !important;
+}
+
+.index-showcase-section .showcase-eyebrow {
+  color: var(--primary-color) !important;
+  background: rgba(212,175,55,0.12) !important;
+}
+
+.index-showcase-section .showcase-card__tag,
+.index-showcase-section .caption-tag {
+  background: rgba(212,175,55,0.15) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(212,175,55,0.3) !important;
+}
+
+.index-cta-section {
+  background: #0A192F !important;
+}
+
+.featured-products-section .section-title,
+.featured-categories-section .section-title {
+  color: #0A192F !important;
+}
+
+.index-showcase-section {
+  background: #F0F2F5 !important;
+}
+
+.navbar {
+  box-shadow: 0 2px 16px rgba(10,25,47,0.14) !important;
+}
+
 /* ========== EMPTY SUBMENU HIDING (Auto-added by Zappy) ========== */
 .sub-menu:empty,
 .dropdown-menu:empty,
