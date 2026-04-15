@@ -11738,6 +11738,52 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700
   box-shadow: 0 2px 16px rgba(10,25,47,0.14) !important;
 }
 
+.index-hero-section .index-hero-card {
+  padding: 44px 48px !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  background-color: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border: none !important;
+}
+
+.index-hero-section .index-hero-btn-primary:hover {
+  background-color: #e67e00 !important;
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  border: 1px solid var(--surface-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  border: 1px solid var(--surface-color) !important;
+  color: var(--surface-color) !important;
+  background-color: rgba(255,255,255,0.08) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+}
+
+.index-hero-section .index-hero-btn-secondary:hover {
+  background-color: rgba(255,255,255,0.18) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: var(--surface-color) !important;
+}
+
 /* ========== EMPTY SUBMENU HIDING (Auto-added by Zappy) ========== */
 .sub-menu:empty,
 .dropdown-menu:empty,
