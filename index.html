@@ -243,275 +243,7 @@
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.index-showcase-section {
-  background-color: #F6F0E7;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.55) 0, rgba(255,255,255,0) 22%),
-    radial-gradient(circle at 80% 70%, rgba(200,154,75,0.10) 0, rgba(200,154,75,0) 28%);
-  color: var(--text-dark);
-  padding: 90px 24px 80px;
-  position: relative;
-  overflow: visible;
-  direction: rtl;
-}
 
-.index-showcase-section .showcase-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ── Header ── */
-.index-showcase-section .showcase-header {
-  text-align: center;
-  margin-bottom: 52px;
-  max-width: 740px;
-  margin-inline: auto;
-  margin-bottom: 52px;
-}
-
-.index-showcase-section .showcase-eyebrow {
-  display: inline-block;
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--secondary);
-  background: rgba(184,107,82,0.10);
-  padding: 5px 16px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-}
-
-.index-showcase-section .showcase-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--text-dark);
-  margin: 0 0 20px;
-  letter-spacing: -0.02em;
-}
-
-.index-showcase-section .showcase-intro {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-dark);
-  margin: 0;
-  text-align: center;
-}
-
-/* ── Grid ── */
-.index-showcase-section .showcase-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  direction: rtl;
-}
-
-/* Large card spans 1 row, 1 col but taller */
-.index-showcase-section .showcase-card--large {
-  grid-column: 1;
-  grid-row: 1 / 3;
-}
-
-/* Two medium cards stacked in right col */
-.index-showcase-section .showcase-card--medium {
-  grid-column: 2;
-}
-
-/* Wide card spans full width at bottom */
-.index-showcase-section .showcase-card--wide {
-  grid-column: 1 / 3;
-  grid-row: 3;
-}
-
-/* ── Card Base ── */
-.index-showcase-section .showcase-card {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px rgba(82,58,34,0.12);
-  cursor: default;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.index-showcase-section .showcase-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(82,58,34,0.22);
-}
-
-/* Image wrap fills card */
-.index-showcase-section .showcase-card__image-wrap {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.index-showcase-section .showcase-card__image-wrap > div[data-preserve-bg] {
-  width: 100%;
-  height: 100%;
-}
-
-/* Gradient overlay for readability */
-.index-showcase-section .showcase-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(30,20,10,0.82) 0%, rgba(30,20,10,0.38) 50%, rgba(30,20,10,0.08) 100%);
-  z-index: 2;
-}
-
-.index-showcase-section .showcase-card__overlay--wide {
-  background: linear-gradient(to right, rgba(30,20,10,0.80) 0%, rgba(30,20,10,0.45) 55%, rgba(30,20,10,0.05) 100%);
-}
-
-/* Content positioned at bottom */
-.index-showcase-section .showcase-card__content {
-  position: relative;
-  z-index: 10;
-  padding: 28px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  height: 100%;
-  min-height: inherit;
-  box-sizing: border-box;
-  text-align: right;
-}
-
-.index-showcase-section .showcase-card__content--wide {
-  justify-content: center;
-  max-width: 55%;
-}
-
-.index-showcase-section .showcase-card__tag {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(247,242,234,0.75);
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.22);
-  padding: 4px 12px;
-  border-radius: 999px;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-.index-showcase-section .showcase-card__title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.45;
-  color: var(--text-light);
-  margin: 0 0 14px;
-  letter-spacing: -0.01em;
-}
-
-.index-showcase-section .showcase-card__rule {
-  width: 36px;
-  height: 2px;
-  background: var(--secondary);
-  border-radius: 2px;
-  opacity: 0.85;
-}
-
-/* Card Heights */
-.index-showcase-section .showcase-card--large {
-  min-height: 540px;
-}
-
-.index-showcase-section .showcase-card--medium {
-  min-height: 250px;
-}
-
-.index-showcase-section .showcase-card--wide {
-  min-height: 260px;
-}
-
-/* Large card title slightly bigger */
-.index-showcase-section .showcase-card--large .showcase-card__title {
-  font-size: 1.5rem;
-}
-
-/* Wide card title */
-.index-showcase-section .showcase-card--wide .showcase-card__title {
-  font-size: 1.35rem;
-}
-
-/* ── Responsive: Tablet ── */
-@media (max-width: 900px) {
-  .index-showcase-section .showcase-card--large {
-    min-height: 420px;
-  }
-  .index-showcase-section .showcase-card--medium {
-    min-height: 200px;
-  }
-  .index-showcase-section .showcase-card--wide {
-    min-height: 220px;
-  }
-  .index-showcase-section .showcase-card__content--wide {
-    max-width: 70%;
-  }
-}
-
-/* ── Responsive: Mobile ── */
-@media (max-width: 768px) {
-  .index-showcase-section {
-    padding: 80px 16px 60px;
-  }
-
-  .index-showcase-section .showcase-title {
-    font-size: 1.6rem;
-  }
-
-  .index-showcase-section .showcase-header {
-    margin-bottom: 32px;
-  }
-
-  .index-showcase-section .showcase-grid {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto !important;
-    gap: 16px;
-  }
-
-  .index-showcase-section .showcase-card--large {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    min-height: 320px;
-  }
-
-  .index-showcase-section .showcase-card--medium {
-    grid-column: 1 !important;
-    min-height: 220px;
-  }
-
-  .index-showcase-section .showcase-card--wide {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    min-height: 240px;
-  }
-
-  .index-showcase-section .showcase-card__content--wide {
-    max-width: 90%;
-    justify-content: flex-end;
-  }
-
-  .index-showcase-section .showcase-card__title {
-    font-size: 1.1rem !important;
-  }
-
-  .index-showcase-section .showcase-card__content {
-    padding: 20px;
-  }
-}
-</style>
 
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
@@ -768,6 +500,324 @@
   .index-sectors-section .sector-card__badge {
     font-size: 10px;
     padding: 3px 12px;
+  }
+}
+</style>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-showcase-section {
+  position: relative;
+  overflow: visible;
+  background-color: #0A192F;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(212,175,55,0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(112,128,144,0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0A192F 0%, #0d2240 100%);
+  color: var(--text-light);
+  padding: 90px 0 100px;
+  direction: rtl;
+}
+
+.index-showcase-section .showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── Header ── */
+.index-showcase-section .showcase-header {
+  text-align: center;
+  margin-bottom: 56px;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 56px;
+}
+
+.index-showcase-section .showcase-label {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 999px;
+  padding: 6px 18px;
+  margin-bottom: 20px;
+}
+
+.index-showcase-section .showcase-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-light);
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+}
+
+.index-showcase-section .showcase-intro {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Grid Layout ── */
+.index-showcase-section .showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  direction: rtl;
+}
+
+/* Large card spans 2 rows on the right column */
+.index-showcase-section .showcase-card--large {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* Tall card in left column top */
+.index-showcase-section .showcase-card--tall {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Regular cards */
+.index-showcase-section .showcase-grid .showcase-card:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.index-showcase-section .showcase-grid .showcase-card:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* ── Cards ── */
+.index-showcase-section .showcase-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 280px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.index-showcase-section .showcase-card--large {
+  min-height: 580px;
+}
+
+.index-showcase-section .showcase-card--tall {
+  min-height: 280px;
+}
+
+.index-showcase-section .showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.45);
+}
+
+/* ── Card Image ── */
+.index-showcase-section .showcase-card__image-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.index-showcase-section .showcase-card__bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: unset !important;
+  transition: transform 0.5s ease;
+}
+
+.index-showcase-section .showcase-card:hover .showcase-card__bg {
+  transform: scale(1.04);
+}
+
+.index-showcase-section .showcase-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 20, 40, 0.88) 0%,
+    rgba(8, 20, 40, 0.45) 45%,
+    rgba(8, 20, 40, 0.12) 100%
+  );
+}
+
+/* ── Card Content ── */
+.index-showcase-section .showcase-card__content {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  padding: 28px 28px 28px;
+  z-index: 10;
+  text-align: right;
+}
+
+.index-showcase-section .showcase-card__tag {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(212,175,55,0.15);
+  border: 1px solid rgba(212,175,55,0.4);
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.index-showcase-section .showcase-card__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-light);
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.index-showcase-section .showcase-card--large .showcase-card__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.index-showcase-section .showcase-card--large .showcase-card__content {
+  padding: 36px 32px;
+}
+
+/* ── Accent line on hover ── */
+.index-showcase-section .showcase-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  z-index: 20;
+  transition: width 0.4s ease;
+  border-radius: 0 0 0 16px;
+}
+
+.index-showcase-section .showcase-card:hover::after {
+  width: 100%;
+}
+
+/* ── Bottom Divider ── */
+.index-showcase-section .showcase-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.index-showcase-section .showcase-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 900px) {
+  .index-showcase-section .showcase-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .index-showcase-section .showcase-card--large {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    min-height: 340px;
+  }
+
+  .index-showcase-section .showcase-card--tall {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 240px;
+  }
+
+  .index-showcase-section .showcase-grid .showcase-card:nth-child(3),
+  .index-showcase-section .showcase-grid .showcase-card:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .index-showcase-section .showcase-card {
+    min-height: 240px;
+  }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 768px) {
+  .index-showcase-section {
+    padding: 60px 0 80px;
+  }
+
+  .index-showcase-section .showcase-container {
+    padding: 0 16px;
+  }
+
+  .index-showcase-section .showcase-header {
+    margin-bottom: 36px;
+  }
+
+  .index-showcase-section .showcase-title {
+    font-size: 1.6rem;
+  }
+
+  .index-showcase-section .showcase-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 16px;
+  }
+
+  .index-showcase-section .showcase-card--large,
+  .index-showcase-section .showcase-card--tall,
+  .index-showcase-section .showcase-grid .showcase-card:nth-child(3),
+  .index-showcase-section .showcase-grid .showcase-card:nth-child(4) {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 260px;
+  }
+
+  .index-showcase-section .showcase-card--large {
+    min-height: 300px;
+  }
+
+  .index-showcase-section .showcase-card__content {
+    padding: 20px;
+  }
+
+  .index-showcase-section .showcase-card--large .showcase-card__content {
+    padding: 24px 20px;
+  }
+
+  .index-showcase-section .showcase-card--large .showcase-card__title {
+    font-size: 1.2rem;
+  }
+
+  .index-showcase-section .showcase-card__title {
+    font-size: 0.95rem;
   }
 }
 </style>
@@ -1380,7 +1430,7 @@
   <!-- Bottom Divider -->
   <div class="index-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1440,80 L1440,48 Q1380,38 1320,46 T1200,40 Q1140,36 1080,44 T960,38 Q900,42 840,36 T720,42 Q660,46 600,38 T480,44 Q420,40 360,48 T240,42 Q180,38 120,46 T0,40 L0,80 Z" fill="#F1E7DA"></path>
+      <path d="M1440,80 L1440,48 Q1380,38 1320,46 T1200,40 Q1140,36 1080,44 T960,38 Q900,42 840,36 T720,42 Q660,46 600,38 T480,44 Q420,40 360,48 T240,42 Q180,38 120,46 T0,40 L0,80 Z" fill="#0A192F"></path>
     </svg>
   </div>
 </section>
@@ -1450,20 +1500,82 @@
   <!-- Decorative bottom divider -->
   <div class="sectors-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,28 Q100,18 200,26 T400,22 Q500,28 600,20 T800,24 Q900,18 1000,26 T1200,22 L1200,60 Z" fill="#F1E7DA"></path>
+      <path d="M0,60 L0,28 Q100,18 200,26 T400,22 Q500,28 600,20 T800,24 Q900,18 1000,26 T1200,22 L1200,60 Z" fill="#F6F0E7"></path>
     </svg>
   </div>
 </section>
   
 
-    <section class="featured-categories-section" id="featured-categories" data-zappy-dynamic="true">
-      <div class="container">
-        <h2 class="section-title">קנו לפי קטגוריה</h2>
-        <div class="category-blocks" id="zappy-featured-categories">
-          <div class="loading-categories">טוען מוצרים...</div>
+    <section class="index-showcase-section" data-layout-spec="בית-showcase" dir="rtl" data-zappy-section="true" id="featured-categories">
+  <div class="showcase-container">
+    <!-- Section Header -->
+    <div class="showcase-header">
+      <span class="showcase-label">הפתרונות שלנו</span>
+      <h2 class="showcase-title">מרחבים שמוארים. תשתיות שמחזיקות.</h2>
+      <p class="showcase-intro">T.D GLOBAL מספקת פתרונות תאורה ותשתית חשמלית לפרויקטים בקנה מידה גלובלי — מכבישים ומנהרות ועד פארקים, בתי מלון ושדות תעופה. כל פרויקט מתחיל בשותף שמבין את הצרכים האמיתיים בשטח.</p>
+    </div>
+
+    <!-- Showcase Grid -->
+    <div class="showcase-grid">
+
+      <!-- Card 1 - Large Featured -->
+      <article class="showcase-card showcase-card--large">
+        <div class="showcase-card__image-wrap">
+          <div class="showcase-card__bg" style="background-image: url('assets/site-index-showcase-image-1.webp'); background-size: cover; background-position: center; min-height: 400px;"></div>
+          <div class="showcase-card__overlay"></div>
         </div>
-      </div>
-    </section>
+        <div class="showcase-card__content">
+          <span class="showcase-card__tag">מנהרות וכבישים</span>
+          <h3 class="showcase-card__title">ראות מלאה, בטיחות מוכחת — גופי תאורה לכבישים ומנהרות שמאירים כל מסלול.</h3>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="showcase-card showcase-card--tall">
+        <div class="showcase-card__image-wrap">
+          <div class="showcase-card__bg" style="background-image: url('assets/site-index-showcase-image-2.webp'); background-size: cover; background-position: center; min-height: 400px;"></div>
+          <div class="showcase-card__overlay"></div>
+        </div>
+        <div class="showcase-card__content">
+          <span class="showcase-card__tag">איצטדיונים ושטחים פתוחים</span>
+          <h3 class="showcase-card__title">עוצמה, כיסוי ואחידות — תאורה לאיצטדיונים ומעברי גבול.</h3>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="showcase-card">
+        <div class="showcase-card__image-wrap">
+          <div class="showcase-card__bg" style="background-image: url('assets/site-index-showcase-image-3.webp'); background-size: cover; background-position: center; min-height: 400px;"></div>
+          <div class="showcase-card__overlay"></div>
+        </div>
+        <div class="showcase-card__content">
+          <span class="showcase-card__tag">פארקים וגינות ציבוריות</span>
+          <h3 class="showcase-card__title">אווירה חמה ומזמינה — גופי תאורה דקורטיביים לפארקים ומרחבים עירוניים.</h3>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="showcase-card">
+        <div class="showcase-card__image-wrap">
+          <div class="showcase-card__bg" style="background-image: url('assets/site-index-showcase-image-4.webp'); background-size: cover; background-position: center; min-height: 400px;"></div>
+          <div class="showcase-card__overlay"></div>
+        </div>
+        <div class="showcase-card__content">
+          <span class="showcase-card__tag">בתי מלון ושדות תעופה</span>
+          <h3 class="showcase-card__title">עיצוב אור שמעצב חוויה — תאורה לסביבות אירוח ותחבורה ברמה בינלאומית.</h3>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Bottom Divider -->
+  <div class="showcase-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,70 L0,38 Q100,28 200,36 T400,30 Q500,24 600,32 T800,26 Q900,20 1000,30 T1200,24 L1200,70 Z" fill="#0A192F"></path>
+    </svg>
+  </div>
+</section>
   
 
 <section class="index-sectors-section" data-layout-spec="בית-sectors" dir="rtl" id="index-sectors-section">
