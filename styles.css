@@ -12046,6 +12046,279 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700
   }
 }
 
+.about-story-section {
+  background-color: var(--bg-light) !important;
+  background-image: radial-gradient(circle at 15% 25%, rgba(212,175,55,0.10) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(112,128,144,0.08) 0%, transparent 40%),
+    linear-gradient(180deg, var(--bg-light) 0%, #EFE7DC 100%) !important;
+}
+
+.about-story-section .about-story-divider-wrapper svg path {
+  fill: var(--primary) !important;
+}
+
+.about-values-section {
+  background-color: var(--primary) !important;
+  background-image: linear-gradient(180deg, var(--primary) 0%, #B39227 100%) !important;
+  color: var(--text-light) !important;
+}
+
+.about-values-section .about-values-eyebrow {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+.about-values-section .about-values-title,
+.about-values-section .about-values-subtitle {
+  color: var(--text-light) !important;
+}
+
+.about-values-section .about-values-card {
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+}
+
+.about-values-section .about-values-card-title {
+  color: var(--text-light) !important;
+}
+
+.about-values-section .about-values-card-text {
+  color: rgba(255,255,255,0.88) !important;
+}
+
+.about-values-section .about-values-card-icon {
+  background: rgba(255,255,255,0.18) !important;
+  color: var(--text-light) !important;
+  border-color: rgba(255,255,255,0.30) !important;
+}
+
+.about-values-section .about-values-divider-wrapper svg path {
+  fill: var(--bg-dark) !important;
+}
+
+.about-process-section {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-label,
+.about-process-section .about-process-title,
+.about-process-section .about-process-subtitle,
+.about-process-section .about-process-step-title,
+.about-process-section .about-process-step-card p {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-card {
+  background: rgba(255,255,255,0.07) !important;
+  border-color: rgba(212,175,55,0.22) !important;
+}
+
+.about-process-section .about-process-step-icon {
+  background: rgba(212,175,55,0.15) !important;
+  color: var(--primary) !important;
+}
+
+.about-process-section .about-process-step-badge {
+  background: var(--primary) !important;
+  color: var(--bg-dark) !important;
+}
+
+.about-process-section .about-process-step-number {
+  color: var(--bg-dark) !important;
+}
+
+.about-process-section .about-process-divider-wrapper svg path {
+  fill: var(--bg-dark) !important;
+}
+
+.about-reach-section {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+}
+
+.about-reach-section .about-reach-label,
+.about-reach-section .about-reach-heading,
+.about-reach-section .about-reach-body,
+.about-reach-section .stat-value,
+.about-reach-section .stat-desc,
+.about-reach-section .region-name {
+  color: var(--text-light) !important;
+}
+
+.about-reach-section .about-reach-stat {
+  background: rgba(255,255,255,0.07) !important;
+  border-color: rgba(212,175,55,0.22) !important;
+}
+
+.about-reach-section .stat-icon {
+  color: var(--primary) !important;
+}
+
+.about-reach-section .region-dot {
+  background: var(--secondary) !important;
+}
+
+.about-reach-section .region-dot--accent {
+  background: var(--primary) !important;
+}
+
+.about-reach-section .about-reach-divider-wrapper svg rect {
+  fill: url(#reachFadeGrad) !important;
+}
+
+.about-promise-section {
+  background-color: var(--bg-light) !important;
+  background-image: linear-gradient(180deg, #EFE7DC 0%, var(--bg-light) 100%) !important;
+  color: var(--text-dark) !important;
+}
+
+.about-promise-section .about-promise-label {
+  color: var(--primary) !important;
+}
+
+.about-promise-section .about-promise-heading,
+.about-promise-section .about-promise-text {
+  color: var(--text-dark) !important;
+}
+
+.about-promise-section .about-promise-cta {
+  background: var(--primary) !important;
+  color: var(--text-light) !important;
+  border-color: var(--primary) !important;
+}
+
+.about-promise-section .about-promise-cta:hover {
+  background: #B39227 !important;
+  border-color: #B39227 !important;
+}
+
+.about-process-section .about-process-step-card {
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(212,175,55,0.30) !important;
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-title {
+  color: var(--primary) !important;
+}
+
+.about-process-section .about-process-step-card p {
+  color: rgba(255,255,255,0.85) !important;
+  opacity: 1 !important;
+}
+
+.about-process-section .about-process-step-icon svg {
+  stroke: var(--primary) !important;
+}
+
+.about-process-section .about-process-label {
+  color: var(--primary) !important;
+}
+
+.about-process-section .about-process-subtitle {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+.about-process-section .about-process-label {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-title {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-subtitle {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-title {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-card p {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-icon {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-badge {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-number {
+  color: var(--text-light) !important;
+}
+
+.about-process-section .about-process-step-card.card-default {
+  background: rgba(255,255,255,0.13) !important;
+  border: 1px solid rgba(212,175,55,0.35) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.about-process-section .about-process-step-card.card-default h3,
+.about-process-section .about-process-step-card.card-default .about-process-step-title {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+}
+
+.about-process-section .about-process-step-card.card-default p {
+  color: var(--surface-color) !important;
+  opacity: 1 !important;
+}
+
+.about-process-section .about-process-step-badge {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.about-process-section .about-process-step-number {
+  color: #0A192F !important;
+  font-weight: 700 !important;
+}
+
+.about-process-section .about-process-title {
+  color: var(--surface-color) !important;
+  opacity: 1 !important;
+}
+
+.about-process-section .about-process-label {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-title {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-subtitle {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-step-title {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-step-card p {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-step-icon {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-step-badge {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-step-card {
+  color: #0A192F !important;
+}
+
+.about-process-section .about-process-step-number {
+  color: var(--surface-color) !important;
+}
+
 /* zappy-nav-child-indent */
 .zappy-products-dropdown .zappy-nav-child > a,
 .sub-menu .zappy-nav-child > a {
