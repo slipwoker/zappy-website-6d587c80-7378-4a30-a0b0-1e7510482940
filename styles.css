@@ -172,7 +172,7 @@
   --gradient-primary: linear-gradient(180deg, #708090 0%, #616F7D 100%);
   --gradient-gold-shine: linear-gradient(90deg, rgba(200,154,75,0) 0%, rgba(244,221,176,0.55) 50%, rgba(200,154,75,0) 100%);
   --gradient-secondary: linear-gradient(180deg, #0000E6 0%, #0000B5 100%);
-  --gradient-gold-accent: linear-gradient(180deg, #E7C27C 0%, #758494 100%);
+  --gradient-gold-accent: linear-gradient(180deg, #B2B2B2 0%, #758494 100%);
   --gradient-dark-section: linear-gradient(180deg, #2E4358 0%, #243547 100%);
   --gradient-overlay-dark: linear-gradient(180deg, rgba(32,45,59,0.08) 0%, rgba(32,45,59,0.42) 100%);
   --gradient-light-section: linear-gradient(180deg, #FAF5EE 0%, #F1E7DA 100%);
@@ -8398,10 +8398,10 @@ a, button {
   text-transform: uppercase;
 }
 .status-pending { background: #fef3c7; color: #5e6c79; }
-.status-paid { background: #d1fae5; color: #0000E6; }
+.status-paid { background: #D0D0D0; color: #0000E6; }
 .status-processing { background: #dbeafe; color: #0000E6; }
 .status-shipped { background: #e0e7ff; color: #0000E6; }
-.status-delivered { background: #d1fae5; color: #0000E6; }
+.status-delivered { background: #D0D0D0; color: #0000E6; }
 .status-cancelled { background: #fee2e2; color: #656565; }
 .order-info-row {
   display: flex;
@@ -9018,7 +9018,7 @@ a, button {
   margin-top: 12px;
 }
 .coupon-badge {
-  background: #d1fae5;
+  background: #D0D0D0;
   color: #0000E6;
   padding: 4px 12px;
   border-radius: 20px;
@@ -11635,6 +11635,8 @@ body.accessibility-widget-visible ._access-menu {
     display: none !important;
   }
 }
+
+
 
 
 
